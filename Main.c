@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *aux; // A global pointer to an array  used during
+int *aux; // A global pointer to an array used during merging
 
 void merge(int a[], int lo, int mid, int hi)
 {

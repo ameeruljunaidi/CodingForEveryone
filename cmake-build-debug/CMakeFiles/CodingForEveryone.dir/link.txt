@@ -1,0 +1,3 @@
+C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\CodingForEveryone.dir/objects.a
+C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\ar.exe qc CMakeFiles\CodingForEveryone.dir/objects.a @CMakeFiles\CodingForEveryone.dir\objects1.rsp
+C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\CodingForEveryone.dir/objects.a -Wl,--no-whole-archive -o CodingForEveryone.exe -Wl,--out-implib,libCodingForEveryone.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CodingForEveryone.dir\linklibs.rsp
