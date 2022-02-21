@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <time.h>
 
-
 #define SIZE 6
 
 void print_map(int map[SIZE][SIZE])
@@ -17,7 +16,6 @@ void print_map(int map[SIZE][SIZE])
 void print_queue(int queue[SIZE * SIZE][2], int size)
 {
     if (!size) return;
-
     for (int i = 0; i < SIZE * SIZE; ++i) printf("%d, %d\n", queue[i][0], queue[i][1]);
     printf("------\n");
 }
@@ -39,6 +37,13 @@ void solve(int ori[SIZE][SIZE], int map[SIZE][SIZE], int x, int y)
     while (queue_size)  // Loop wil run while there is something in the queue
     {
         int flipped = 0; // Variable to keep track if there is a cell in mapping that is flipped
+
+        // Loop through the whole board (all rows and columns)
+        // For every (current) cell, we are checking if it is adjacent to the check cell (the latest x, y in queue)
+        // If it neighbors check cell, and is equal to number, and the mapping at that coordinate is 0
+        // then mark that location i, j on the map as 1, add it to the queue, and re-run the loop
+        // with the check cell as i, j
+
         for (int i = 0; i < SIZE; ++i)
         {
             for (int j = 0; j < SIZE; ++j)
@@ -56,53 +61,43 @@ void solve(int ori[SIZE][SIZE], int map[SIZE][SIZE], int x, int y)
                 // up_check, down_check, right_check, and left_check would be true if the current cell is neighboring
                 // the check cell, which is the latest cell (coordinate x and y) added to the queue
 
-                int up_x = (i - 1 >= 0 && i - 1 < 6) ? i - 1 : -1;
-                int up_y = (up_x != -1) ? j : -1;
-                int up_check = (up_x != -1 && up_y != -1) ? up_x == curr_x && up_y == curr_y : 0;
+                int up_x = (i - 1 >= 0 && i - 1 < SIZE) ? i - 1 : -1;
+                int down_x = (i + 1 >= 0 && i + 1 < SIZE) ? i + 1 : -1;
+                int right_y = (j + 1 >= 0 && j + 1 < SIZE) ? j + 1 : -1;
+                int left_y = (j - 1 >= 0 && j - 1 < SIZE) ? j - 1 : -1;
 
-                int down_x = (i + 1 >= 0 && i + 1 < 6) ? i + 1 : -1;
-                int down_y = (down_x != -1) ? j : -1;
-                int down_check = (down_x != -1 && down_y != -1) ? down_x == curr_x && down_y == curr_y : 0;
-
-                int right_y = (j + 1 >= 0 && j + 1 < 6) ? j + 1 : -1;
-                int right_x = (right_y != -1) ? i : -1;
-                int right_check = (right_x != -1 && right_y != -1) ? right_x == curr_x && right_y == curr_y : 0;
-
-                int left_y = (j - 1 >= 0 && j - 1 < 6) ? j - 1 : -1;
-                int left_x = (left_y != -1) ? i : -1;
-                int left_check = (left_x != -1 && left_y != -1) ? left_x == curr_x && left_y == curr_y : 0;
+                int up_check = (up_x != -1) ? up_x == curr_x && j == curr_y : 0;
+                int down_check = (down_x != -1) ? down_x == curr_x && j == curr_y : 0;
+                int right_check = (right_y != -1) ? i == curr_x && right_y == curr_y : 0;
+                int left_check = (left_y != -1) ? i == curr_x && left_y == curr_y : 0;
 
                 // Store checkers in an array
                 // Loop checkers, if any checker is true, then add current cell to queue
                 int checkers[4];
-                checkers[0] = up_check;
-                checkers[1] = down_check;
-                checkers[2] = right_check;
-                checkers[3] = left_check;
+                checkers[0] = up_check, checkers[1] = down_check, checkers[2] = right_check, checkers[3] = left_check;
 
                 for (int m = 0; m < 4; ++m)
                 {
-                    if (checkers[m])
-                    {
-                        map[i][j] = 1;             // Flip mapping to 1
-                        ++queue_index;             // Increment queue index
-                        ++queue_size;              // Increment queue size
-                        queue[queue_index][0] = i; // Add x-coordinate of current cell to queue
-                        queue[queue_index][1] = j; // Add y-coordinate of current cell to queue
-                        flipped = 1;               // Toggle flipped
-                        break;                     // We only need one of the checkers to be true
-                    }
+                    if (!checkers[m]) continue;
+
+                    map[i][j] = 1;               // Flip mapping to 1
+                    ++queue_index, ++queue_size; // Increment trackers
+                    queue[queue_index][0] = i;   // Add x-coordinate of current cell to queue
+                    queue[queue_index][1] = j;   // Add y-coordinate of current cell to queue
+                    flipped = 1, i = 0, j = 0;   // Restart loop, flipped to true
+                    break;                       // We only need one of the checkers to be true
                 }
             }
         }
 
-        // If we have gone through whole board, and nothing is flipped, it means we have completed the check cell
+        // If we have gone through whole board, and nothing is flipped
+        // It means we have completed the check cell and need to remove the latest check cell in queue
+
         if (!flipped)
         {
-            queue[queue_index][0] = 0; // Reset it back to zero
-            queue[queue_index][1] = 0; // Reset it back to zero
-            --queue_index;             // Decrement queue_index
-            --queue_size;              // Increment queue_index
+            queue[queue_index][0] = 0;   // Reset it back to zero
+            queue[queue_index][1] = 0;   // Reset it back to zero
+            --queue_index, --queue_size; // Decrement Trackers
         }
     }
 }

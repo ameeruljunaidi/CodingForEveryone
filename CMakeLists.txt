@@ -3,4 +3,4 @@ project(CodingForEveryone)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CodingForEveryone Depth.c)
+add_executable(CodingForEveryone DepthIterative.c)

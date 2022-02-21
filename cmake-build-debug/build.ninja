@@ -72,8 +72,8 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_CodingForEveryone: phony || CMakeFiles/CodingForEveryone.dir
 
-build CMakeFiles/CodingForEveryone.dir/Depth.c.o: C_COMPILER__CodingForEveryone_Debug /Users/ajjunaidi/CLionProjects/CodingForEveryone/Depth.c || cmake_object_order_depends_target_CodingForEveryone
-  DEP_FILE = CMakeFiles/CodingForEveryone.dir/Depth.c.o.d
+build CMakeFiles/CodingForEveryone.dir/DepthIterative.c.o: C_COMPILER__CodingForEveryone_Debug /Users/ajjunaidi/CLionProjects/CodingForEveryone/DepthIterative.c || cmake_object_order_depends_target_CodingForEveryone
+  DEP_FILE = CMakeFiles/CodingForEveryone.dir/DepthIterative.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk
   OBJECT_DIR = CMakeFiles/CodingForEveryone.dir
   OBJECT_FILE_DIR = CMakeFiles/CodingForEveryone.dir
@@ -86,7 +86,7 @@ build CMakeFiles/CodingForEveryone.dir/Depth.c.o: C_COMPILER__CodingForEveryone_
 #############################################
 # Link the executable CodingForEveryone
 
-build CodingForEveryone: C_EXECUTABLE_LINKER__CodingForEveryone_Debug CMakeFiles/CodingForEveryone.dir/Depth.c.o
+build CodingForEveryone: C_EXECUTABLE_LINKER__CodingForEveryone_Debug CMakeFiles/CodingForEveryone.dir/DepthIterative.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk
   LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
   OBJECT_DIR = CMakeFiles/CodingForEveryone.dir
