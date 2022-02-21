@@ -17,21 +17,14 @@ void solve_overload(int arr[6][6], int map[6][6], int x, int y, int number)
     map[x][y] = 1;
 
     int up_x = (x - 1 >= 0 && x - 1 < 6) ? x - 1 : -1;
-    int up_y = (up_x != -1) ? y : -1;
-
     int down_x = (x + 1 >= 0 && x + 1 < 6) ? x + 1 : -1;
-    int down_y = (down_x != -1) ? y : -1;
-
     int right_y = (y + 1 >= 0 && y + 1 < 6) ? y + 1 : -1;
-    int right_x = (right_y != -1) ? x : -1;
-
     int left_y = (y - 1 >= 0 && y - 1 < 6) ? y - 1 : -1;
-    int left_x = (left_y != -1) ? x : -1;
 
-    if (up_x != -1 && up_y != -1) solve_overload(arr, map, up_x, up_y, number);
-    if (down_x != -1 && down_y != -1) solve_overload(arr, map, down_x, down_y, number);
-    if (right_x != -1 && right_y != -1) solve_overload(arr, map, right_x, right_y, number);
-    if (left_x != -1 && left_y != -1) solve_overload(arr, map, left_x, left_y, number);
+    if (up_x != -1) solve_overload(arr, map, up_x, y, number);
+    if (down_x != -1) solve_overload(arr, map, down_x, y, number);
+    if (right_y != -1) solve_overload(arr, map, x, right_y, number);
+    if (left_y != -1) solve_overload(arr, map, x, left_y, number);
 }
 
 void solve_recursive(int arr[6][6], int map[6][6], int x, int y)
@@ -52,17 +45,17 @@ int main()
     };
 
     int map[6][6];
-    for (int i = 0; i < 6; ++i)
-        for (int j = 0; j < 6; ++j)
-            map[i][j] = 0;
+    for (int i = 0; i < 6; ++i) for (int j = 0; j < 6; ++j) map[i][j] = 0;
 
     clock_t start, end;
     double cpu_time_used;
     start = clock();
+    // Start time tracking
 
     solve_recursive(arr, map, 1, 5);
     print_map(map);
 
+    // End time tracking
     end = clock();
     cpu_time_used = ((double) (end - start));
     printf("Number of operations: %.3f", cpu_time_used);
