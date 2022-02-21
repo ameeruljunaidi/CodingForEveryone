@@ -107,6 +107,35 @@ void solve(int ori[SIZE][SIZE], int map[SIZE][SIZE], int x, int y)
     }
 }
 
+void solve_overload(int arr[6][6], int map[6][6], int x, int y, int number)
+{
+    if (arr[x][y] != number || map[x][y]) return;
+    map[x][y] = 1;
+
+    int up_x = (x - 1 >= 0 && x - 1 < 6) ? x - 1 : -1;
+    int up_y = (up_x != -1) ? y : -1;
+
+    int down_x = (x + 1 >= 0 && x + 1 < 6) ? x + 1 : -1;
+    int down_y = (down_x != -1) ? y : -1;
+
+    int right_y = (y + 1 >= 0 && y + 1 < 6) ? y + 1 : -1;
+    int right_x = (right_y != -1) ? x : -1;
+
+    int left_y = (y - 1 >= 0 && y - 1 < 6) ? y - 1 : -1;
+    int left_x = (left_y != -1) ? x : -1;
+
+    if (up_x != -1 && up_y != -1) solve_overload(arr, map, up_x, up_y, number);
+    if (down_x != -1 && down_y != -1) solve_overload(arr, map, down_x, down_y, number);
+    if (right_x != -1 && right_y != -1) solve_overload(arr, map, right_x, right_y, number);
+    if (left_x != -1 && left_y != -1) solve_overload(arr, map, left_x, left_y, number);
+}
+
+void solve_recursive(int arr[6][6], int map[6][6], int x, int y)
+{
+    int number = arr[x][y];
+    solve_overload(arr, map, x, y, number);
+}
+
 int main()
 {
     int arr[SIZE][SIZE] = {
@@ -118,21 +147,38 @@ int main()
             {4, 4, 4, 4, 2, 2}
     };
 
-    clock_t start, end;
-    double cpu_time_used;
-    start = clock();
 
     int map[SIZE][SIZE];
     for (int i = 0; i < SIZE; ++i)
         for (int j = 0; j < SIZE; ++j)
             map[i][j] = 0;
 
+    clock_t start, end;
+    double cpu_time_used;
+
+    // Solve iteratively
+    start = clock();
+
+    solve_recursive(arr, map, 1, 5);
+    print_map(map);
+
+    end = clock();
+    cpu_time_used = ((double) (end - start));
+    printf("Number of operations (iterative): %.3f\n\n", cpu_time_used);
+
+    for (int i = 0; i < SIZE; ++i)
+        for (int j = 0; j < SIZE; ++j)
+            map[i][j] = 0;
+
+    // Solve recursively
+    start = clock();
+
     solve(arr, map, 1, 5);
     print_map(map);
 
     end = clock();
     cpu_time_used = ((double) (end - start));
-    printf("Number of operations: %.3f", cpu_time_used);
+    printf("Number of operations (recursive): %.3f\n", cpu_time_used);
 
     return 0;
 }
