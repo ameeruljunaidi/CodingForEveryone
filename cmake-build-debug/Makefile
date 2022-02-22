@@ -128,29 +128,29 @@ CodingForEveryone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/build
 .PHONY : CodingForEveryone/fast
 
-Main.obj: Main.c.obj
-.PHONY : Main.obj
+DepthIterative.obj: DepthIterative.c.obj
+.PHONY : DepthIterative.obj
 
 # target to build an object file
-Main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/Main.c.obj
-.PHONY : Main.c.obj
+DepthIterative.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/DepthIterative.c.obj
+.PHONY : DepthIterative.c.obj
 
-Main.i: Main.c.i
-.PHONY : Main.i
+DepthIterative.i: DepthIterative.c.i
+.PHONY : DepthIterative.i
 
 # target to preprocess a source file
-Main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/Main.c.i
-.PHONY : Main.c.i
+DepthIterative.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/DepthIterative.c.i
+.PHONY : DepthIterative.c.i
 
-Main.s: Main.c.s
-.PHONY : Main.s
+DepthIterative.s: DepthIterative.c.s
+.PHONY : DepthIterative.s
 
 # target to generate assembly for a file
-Main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/Main.c.s
-.PHONY : Main.c.s
+DepthIterative.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/DepthIterative.c.s
+.PHONY : DepthIterative.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CodingForEveryone
-	@echo ... Main.obj
-	@echo ... Main.i
-	@echo ... Main.s
+	@echo ... DepthIterative.obj
+	@echo ... DepthIterative.i
+	@echo ... DepthIterative.s
 .PHONY : help
 
 

@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/AJ/CLionProjects/CodingForEveryone/Main.c">
+		<Unit filename="C:/Users/AJ/CLionProjects/CodingForEveryone/DepthIterative.c">
 			<Option target="CodingForEveryone"/>
 		</Unit>
 		<Unit filename="C:/Users/AJ/CLionProjects/CodingForEveryone/CMakeLists.txt">
