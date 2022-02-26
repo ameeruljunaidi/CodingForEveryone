@@ -1,10 +1,6 @@
 # ninja log v5
-1	202	1645458836525195429	CMakeFiles/CodingForEveryone.dir/DepthRecursive.c.o	fb243a15670db165
+0	307	1645891013631721650	build.ninja	c188abcaa95e5ec2
 249	335	1645890685875268821	CodingForEveryone	b688242be563ba2f
-0	148	1645458969120281823	CMakeFiles/CodingForEveryone.dir/DepthIterative.c.o	d911b0374d4647f6
-1	199	1645415642498681123	CMakeFiles/CodingForEveryone.dir/StdIn.c.o	6ad3d6db53fd1cb2
-0	307	1645890686355466711	build.ninja	c188abcaa95e5ec2
 0	249	1645890685783848463	CMakeFiles/CodingForEveryone.dir/LinkedListSelectionSort.c.o	bfb3d5035c13079f
-0	275	1645890583678513980	CMakeFiles/CodingForEveryone.dir/Main.c.o	707bfe87fc45d3e4
-0	188	1645417295709349899	CMakeFiles/CodingForEveryone.dir/Depth.c.o	de2f670b1ac55ef9
-0	298	1645824096795908467	CMakeFiles/CodingForEveryone.dir/LinkedList.c.o	2eb874bbab893f1
+1	133	1645891017678110753	CMakeFiles/CodingForEveryone.dir/LinkedListSelectionSort.c.o	bfb3d5035c13079f
+134	205	1645891017754584972	CodingForEveryone	b688242be563ba2f

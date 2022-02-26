@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CodingForEveryone"
+			"path" : "CodingForEveryone.exe"
+		},
+		{
+			"path" : "CodingForEveryone.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -35,7 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk"
+					"fragment" : "-g"
 				}
 			],
 			"language" : "C",
@@ -55,14 +58,18 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-L/opt/homebrew/opt/llvm/lib",
+				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "CodingForEveryone",
-	"nameOnDisk" : "CodingForEveryone",
+	"nameOnDisk" : "CodingForEveryone.exe",
 	"paths" : 
 	{
 		"build" : ".",
