@@ -102,7 +102,7 @@ void sort(node **head)
 }
 
 
-void test()
+void test1()
 {
     node *head = NULL;
     int values[] = {4, 5, 3, 2, 0, 1};
@@ -115,8 +115,22 @@ void test()
     print_node(head);
 }
 
+void test2()
+{
+    node *head = NULL;
+    int values[] = {20, 32, 34, 42, 3, 7, 33, 4, 25, 14, 6, 10, 44};
+    int size = sizeof(values) / sizeof(values[0]);
+    push_front_all(&head, values, size);
+    printf("Original list: ");
+    print_node(head);
+    printf("Ordered list: ");
+    sort(&head);
+    print_node(head);
+}
+
 int main()
 {
-    test();
+    test1();
+    test2();
     return 0;
 }
