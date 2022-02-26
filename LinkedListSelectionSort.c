@@ -173,3 +173,23 @@ int main()
     test_sort();
     return 0;
 }
+
+// Output:
+//
+// Testing extract function
+// ------------------------
+// Original list:3 4 0 1 2 5
+// Extracted: 0
+// Remaining: 3 4 1 2 5
+//
+// Testing single pass function
+// ----------------------------
+// Original list: 3 4 0 1 2 5
+// After one pass ascending: 0 3 4 1 2 5
+// After one pass descending: 5 0 3 4 1 2
+//
+// Testing sorting function
+// ------------------------
+// Original list: 3 4 0 1 2 5
+// After sort ascending: 0 1 2 3 4 5
+// After sort ascending: 5 4 3 2 1 0
