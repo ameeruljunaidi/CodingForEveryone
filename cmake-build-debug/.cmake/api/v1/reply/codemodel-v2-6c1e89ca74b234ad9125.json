@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.21"
@@ -39,11 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CodingForEveryone::@6890427a1f51a3e7e1df",
-<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-ea17058bd59b556f0c28.json
-					"jsonFile" : "target-CodingForEveryone-Debug-43a2b0437c913b2b3cbb.json",
-=======
-					"jsonFile" : "target-CodingForEveryone-Debug-61511cf30fa2f5d50321.json",
->>>>>>> origin/master:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-9684310c263abf7158a1.json
+					"jsonFile" : "target-CodingForEveryone-Debug-e522cc8a2292a95184ef.json",
 					"name" : "CodingForEveryone",
 					"projectIndex" : 0
 				}
@@ -53,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/AJ/CLionProjects/CodingForEveryone/cmake-build-debug",
-		"source" : "C:/Users/AJ/CLionProjects/CodingForEveryone"
+		"build" : "/Users/ajjunaidi/CLionProjects/CodingForEveryone/cmake-build-debug",
+		"source" : "/Users/ajjunaidi/CLionProjects/CodingForEveryone"
 	},
 	"version" : 
 	{

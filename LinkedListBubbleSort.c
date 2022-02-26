@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -111,9 +110,6 @@ void test()
     push_front_all(&head, values, size);
     printf("Original list: ");
     print_node(head);
-    // printf("Swapped list: ");
-    // swap(&head, get_node(head, 1), get_node(head, 2), get_node(head, 3), get_node(head, 4));
-    // print_node(head);
     printf("Ordered list: ");
     sort(&head);
     print_node(head);
