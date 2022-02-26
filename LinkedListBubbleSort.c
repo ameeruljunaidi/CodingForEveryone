@@ -45,9 +45,7 @@ void push_front(node **head, int value)
 }
 
 void push_front_all(node **head, int values[], int size)
-{
-    for (int i = 0; i < size; ++i) push_front(head, values[i]);
-}
+{ for (int i = 0; i < size; ++i) push_front(head, values[i]); }
 
 void swap(node **head, node *a, node *b, node *c, node *d)
 {
