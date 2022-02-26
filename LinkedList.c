@@ -30,7 +30,7 @@ void testLinkedList();
  */
 node *createNode(int val, node *next)
 {
-    node *new = (node *)malloc(sizeof(node));
+    node *new = (node *) malloc(sizeof(node));
     new->value = val;
     new->next = next;
 
@@ -186,8 +186,7 @@ node *mergeLinkedList(node *left, node *right)
         {
             current->next = left;
             left = left->next;
-        }
-        else
+        } else
         {
             current->next = right;
             right = right->next;
@@ -248,4 +247,9 @@ void testLinkedList()
     printLinkedList(head);
 
     clearLinkedList(head);
+}
+
+int main()
+{
+    return 0;
 }
