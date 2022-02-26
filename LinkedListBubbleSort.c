@@ -11,7 +11,7 @@ void print_node(node *head)
 {
     while (head)
     {
-        printf("%d ", head->value);
+        printf("%.2d ", head->value);
         head = head->next;
     }
     printf("\n");
@@ -49,57 +49,36 @@ void push_front_all(node **head, int values[], int size)
     for (int i = 0; i < size; ++i) push_front(head, values[i]);
 }
 
-node *get_node(node *head, int index)
-{
-    for (int i = 0; i < index; ++i)
-    {
-        head = head->next;
-    }
-
-    return head;
-}
-
 void swap(node **head, node *a, node *b, node *c, node *d)
 {
-    // Swapping b and c
-    // n, 1, 2, 3 -> start is null
-    // a, b, c, d
-    // 0, 1, 2, n -> end is null
-    // a, b, c, d
-    c->next = b;
-    b->next = d;
     if (!a) *head = c;
     else a->next = c;
+    b->next = d;
+    c->next = b;
 }
 
-int sort_pass(node **head)
+int single_pass(node **head)
 {
     node *a = NULL;
     node *b = *head;
     node *c = (*head)->next;
     node *d = (*head)->next->next;
 
-    int flag = 0;
+    int check = 0;
     while (c)
     {
         if (b->value > c->value) // Comparison, how to sort?
         {
             swap(head, a, b, c, d);
-            ++flag;
-        }
-        a = b;
-        b = c;
-        c = d;
-        if (!d) continue;
-        else d = d->next;
+            a = c, b = b, c = d, ++check;
+        } else a = b, b = c, c = d;
+        d = (!d) ? d : d->next;
     }
-    return flag;
+    return check;
 }
 
 void sort(node **head)
-{
-    while (sort_pass(head));
-}
+{ while (single_pass(head)); }
 
 
 void test1()
@@ -110,22 +89,24 @@ void test1()
     push_front_all(&head, values, size);
     printf("Original list: ");
     print_node(head);
-    printf("Ordered list: ");
+    printf("Ordered list:  ");
     sort(&head);
     print_node(head);
+    free_nodes(head);
 }
 
 void test2()
 {
     node *head = NULL;
-    int values[] = {20, 32, 34, 42, 3, 7, 33, 4, 25, 14, 6, 10, 44};
+    int values[] = {4, 6, 123, 52, 3, 252, 55, 34, 32, 1, 34, 5, 5, 35, 2, 235, 2, 5, 6, 6, 6};
     int size = sizeof(values) / sizeof(values[0]);
     push_front_all(&head, values, size);
     printf("Original list: ");
     print_node(head);
-    printf("Ordered list: ");
+    printf("Ordered list:  ");
     sort(&head);
     print_node(head);
+    free_nodes(head);
 }
 
 int main()
@@ -134,3 +115,10 @@ int main()
     test2();
     return 0;
 }
+
+// Output:
+//
+// Original list: 01 00 02 03 05 04
+// Ordered list:  00 01 02 03 04 05
+// Original list: 06 06 06 05 02 235 02 35 05 05 34 01 32 34 55 252 03 52 123 06 04
+// Ordered list:  01 02 02 03 04 05 05 05 06 06 06 06 32 34 34 35 52 55 123 235 252
