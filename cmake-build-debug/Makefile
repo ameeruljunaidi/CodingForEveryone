@@ -128,29 +128,29 @@ CodingForEveryone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/build
 .PHONY : CodingForEveryone/fast
 
-DepthIterative.obj: DepthIterative.c.obj
-.PHONY : DepthIterative.obj
+LinkedListBubbleSort.obj: LinkedListBubbleSort.c.obj
+.PHONY : LinkedListBubbleSort.obj
 
 # target to build an object file
-DepthIterative.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/DepthIterative.c.obj
-.PHONY : DepthIterative.c.obj
+LinkedListBubbleSort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj
+.PHONY : LinkedListBubbleSort.c.obj
 
-DepthIterative.i: DepthIterative.c.i
-.PHONY : DepthIterative.i
+LinkedListBubbleSort.i: LinkedListBubbleSort.c.i
+.PHONY : LinkedListBubbleSort.i
 
 # target to preprocess a source file
-DepthIterative.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/DepthIterative.c.i
-.PHONY : DepthIterative.c.i
+LinkedListBubbleSort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.i
+.PHONY : LinkedListBubbleSort.c.i
 
-DepthIterative.s: DepthIterative.c.s
-.PHONY : DepthIterative.s
+LinkedListBubbleSort.s: LinkedListBubbleSort.c.s
+.PHONY : LinkedListBubbleSort.s
 
 # target to generate assembly for a file
-DepthIterative.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/DepthIterative.c.s
-.PHONY : DepthIterative.c.s
+LinkedListBubbleSort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.s
+.PHONY : LinkedListBubbleSort.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CodingForEveryone
-	@echo ... DepthIterative.obj
-	@echo ... DepthIterative.i
-	@echo ... DepthIterative.s
+	@echo ... LinkedListBubbleSort.obj
+	@echo ... LinkedListBubbleSort.i
+	@echo ... LinkedListBubbleSort.s
 .PHONY : help
 
 
