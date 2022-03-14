@@ -68,28 +68,28 @@ include CMakeFiles/CodingForEveryone.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CodingForEveryone.dir/flags.make
 
-CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj: CMakeFiles/CodingForEveryone.dir/flags.make
-CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj: ../LinkedListBubbleSort.c
-CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj: CMakeFiles/CodingForEveryone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AJ\CLionProjects\CodingForEveryone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj"
-	C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj -MF CMakeFiles\CodingForEveryone.dir\LinkedListBubbleSort.c.obj.d -o CMakeFiles\CodingForEveryone.dir\LinkedListBubbleSort.c.obj -c C:\Users\AJ\CLionProjects\CodingForEveryone\LinkedListBubbleSort.c
+CMakeFiles/CodingForEveryone.dir/Main.c.obj: CMakeFiles/CodingForEveryone.dir/flags.make
+CMakeFiles/CodingForEveryone.dir/Main.c.obj: ../Main.c
+CMakeFiles/CodingForEveryone.dir/Main.c.obj: CMakeFiles/CodingForEveryone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\AJ\CLionProjects\CodingForEveryone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CodingForEveryone.dir/Main.c.obj"
+	C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/CodingForEveryone.dir/Main.c.obj -MF CMakeFiles\CodingForEveryone.dir\Main.c.obj.d -o CMakeFiles\CodingForEveryone.dir\Main.c.obj -c C:\Users\AJ\CLionProjects\CodingForEveryone\Main.c
 
-CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.i"
-	C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\AJ\CLionProjects\CodingForEveryone\LinkedListBubbleSort.c > CMakeFiles\CodingForEveryone.dir\LinkedListBubbleSort.c.i
+CMakeFiles/CodingForEveryone.dir/Main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CodingForEveryone.dir/Main.c.i"
+	C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\AJ\CLionProjects\CodingForEveryone\Main.c > CMakeFiles\CodingForEveryone.dir\Main.c.i
 
-CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.s"
-	C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\AJ\CLionProjects\CodingForEveryone\LinkedListBubbleSort.c -o CMakeFiles\CodingForEveryone.dir\LinkedListBubbleSort.c.s
+CMakeFiles/CodingForEveryone.dir/Main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CodingForEveryone.dir/Main.c.s"
+	C:\Users\AJ\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\AJ\CLionProjects\CodingForEveryone\Main.c -o CMakeFiles\CodingForEveryone.dir\Main.c.s
 
 # Object files for target CodingForEveryone
 CodingForEveryone_OBJECTS = \
-"CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj"
+"CMakeFiles/CodingForEveryone.dir/Main.c.obj"
 
 # External object files for target CodingForEveryone
 CodingForEveryone_EXTERNAL_OBJECTS =
 
-CodingForEveryone.exe: CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj
+CodingForEveryone.exe: CMakeFiles/CodingForEveryone.dir/Main.c.obj
 CodingForEveryone.exe: CMakeFiles/CodingForEveryone.dir/build.make
 CodingForEveryone.exe: CMakeFiles/CodingForEveryone.dir/linklibs.rsp
 CodingForEveryone.exe: CMakeFiles/CodingForEveryone.dir/objects1.rsp

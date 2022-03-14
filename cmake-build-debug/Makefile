@@ -128,29 +128,29 @@ CodingForEveryone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/build
 .PHONY : CodingForEveryone/fast
 
-LinkedListBubbleSort.obj: LinkedListBubbleSort.c.obj
-.PHONY : LinkedListBubbleSort.obj
+Main.obj: Main.c.obj
+.PHONY : Main.obj
 
 # target to build an object file
-LinkedListBubbleSort.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj
-.PHONY : LinkedListBubbleSort.c.obj
+Main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/Main.c.obj
+.PHONY : Main.c.obj
 
-LinkedListBubbleSort.i: LinkedListBubbleSort.c.i
-.PHONY : LinkedListBubbleSort.i
+Main.i: Main.c.i
+.PHONY : Main.i
 
 # target to preprocess a source file
-LinkedListBubbleSort.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.i
-.PHONY : LinkedListBubbleSort.c.i
+Main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/Main.c.i
+.PHONY : Main.c.i
 
-LinkedListBubbleSort.s: LinkedListBubbleSort.c.s
-.PHONY : LinkedListBubbleSort.s
+Main.s: Main.c.s
+.PHONY : Main.s
 
 # target to generate assembly for a file
-LinkedListBubbleSort.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.s
-.PHONY : LinkedListBubbleSort.c.s
+Main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CodingForEveryone.dir\build.make CMakeFiles/CodingForEveryone.dir/Main.c.s
+.PHONY : Main.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CodingForEveryone
-	@echo ... LinkedListBubbleSort.obj
-	@echo ... LinkedListBubbleSort.i
-	@echo ... LinkedListBubbleSort.s
+	@echo ... Main.obj
+	@echo ... Main.i
+	@echo ... Main.s
 .PHONY : help
 
 

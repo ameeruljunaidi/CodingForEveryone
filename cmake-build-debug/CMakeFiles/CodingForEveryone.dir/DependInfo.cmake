@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/AJ/CLionProjects/CodingForEveryone/LinkedListBubbleSort.c" "CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj" "gcc" "CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj.d"
+  "C:/Users/AJ/CLionProjects/CodingForEveryone/Main.c" "CMakeFiles/CodingForEveryone.dir/Main.c.obj" "gcc" "CMakeFiles/CodingForEveryone.dir/Main.c.obj.d"
   )
 
 # Targets to which this target links.

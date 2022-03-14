@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj"
-  "CMakeFiles/CodingForEveryone.dir/LinkedListBubbleSort.c.obj.d"
+  "CMakeFiles/CodingForEveryone.dir/Main.c.obj"
+  "CMakeFiles/CodingForEveryone.dir/Main.c.obj.d"
   "CodingForEveryone.exe"
   "CodingForEveryone.exe.manifest"
   "CodingForEveryone.pdb"
